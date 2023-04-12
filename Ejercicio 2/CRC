@@ -1,0 +1,74 @@
+Link: https://echeung.me/crcmaker/?share=W3sibmFtZSI6IlBlcnNvbmEiLCJzdXBlcmNsYXNzZXMiOiIiLCJzdWJjbGFzc2VzIjoiIiwidHlwZSI6MSwicmVzcG9uc2liaWxpdGllcyI6WyJDb25vY2VyIE5vbWJyZSIsIkNvbm9jZXIgSUQiLCJDb25vY2VyIFRlbOlmb25vIiwiQ29ub2NlciBFZGFkIl0sImNvbGxhYm9yYXRvcnMiOlsiIl19LHsibmFtZSI6IkRvY3RvciIsInN1cGVyY2xhc3NlcyI6IiIsInN1YmNsYXNzZXMiOiIiLCJ0eXBlIjoxLCJyZXNwb25zaWJpbGl0aWVzIjpbIkNvbm9jZXIgTm9tYnJlIiwiQ29ub2NlciBFc3BlY2lhbGlkYWQiXSwiY29sbGFib3JhdG9ycyI6WyIiXX0seyJuYW1lIjoiQ2l0YSIsInN1cGVyY2xhc3NlcyI6IiIsInN1YmNsYXNzZXMiOiIiLCJ0eXBlIjoxLCJyZXNwb25zaWJpbGl0aWVzIjpbIkNvbm9jZXIgUGVyc29uYSIsIkNvbm9jZXIgRG9jdG9yIiwiQ29ub2NlciBE7WEgeSBIb3JhIiwiQ29ub2NlciBMdWdhciIsIkNvbm9jZXIgSUQiXSwiY29sbGFib3JhdG9ycyI6WyJQZXJzb25hIiwiRG9jdG9yIl19LHsibmFtZSI6IkFwcG9pbnRtZW50U2VydmljZSIsInN1cGVyY2xhc3NlcyI6IiIsInN1YmNsYXNzZXMiOiIiLCJ0eXBlIjoxLCJyZXNwb25zaWJpbGl0aWVzIjpbIkNyZWFyIENpdGEiLCJJbmZvcm1hciBzaSBzZSBjcmVvIGxhIENpdGEgbyBubyB5IHBvcnF1ZSJdLCJjb2xsYWJvcmF0b3JzIjpbIkNpdGEiXX0seyJuYW1lIjoiVmVyaWZpY2Fkb3IiLCJzdXBlcmNsYXNzZXMiOiIiLCJzdWJjbGFzc2VzIjoiIiwidHlwZSI6MSwicmVzcG9uc2liaWxpdGllcyI6WyJWZXJpZmljYXIgc2kgbG9zIGRhdG9zIGRlIGxhIGNpdGEgc29uIGluduFsaWRvcyJdLCJjb2xsYWJvcmF0b3JzIjpbIkFwcG9pbm1lbnRTZXJ2aWNlcyJdfV0=
+
+[
+  {
+    "name": "Persona",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer Nombre",
+      "Conocer ID",
+      "Conocer Teléfono",
+      "Conocer Edad"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "Doctor",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer Nombre",
+      "Conocer Especialidad"
+    ],
+    "collaborators": [
+      ""
+    ]
+  },
+  {
+    "name": "Cita",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Conocer Persona",
+      "Conocer Doctor",
+      "Conocer Día y Hora",
+      "Conocer Lugar",
+      "Conocer ID"
+    ],
+    "collaborators": [
+      "Persona",
+      "Doctor"
+    ]
+  },
+  {
+    "name": "AppointmentService",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Crear Cita",
+      "Informar si se creo la Cita o no y porque"
+    ],
+    "collaborators": [
+      "Cita"
+    ]
+  },
+  {
+    "name": "Verificador",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Verificar si los datos de la cita son inválidos"
+    ],
+    "collaborators": [
+      "AppoinmentServices"
+    ]
+  }
+]
