@@ -8,8 +8,7 @@ namespace Library
     {
         /*
             No cumple el principio SRP, porque esta  clase destinada a solo crear una cita tambien tiene la
-            responsabilidad de verificar si los datos son correctos e imprime la informacon de la cita lo cual
-            lo podria hacer otra clase.
+            responsabilidad de verificar si los datos son correctos, y no tiene expertos en infomacion.
         */
 
         public static List<Cita> listaCitas = new List<Cita>();
@@ -21,6 +20,5 @@ namespace Library
             
             return stringBuilder.ToString();
         }
-
     }
 }
