@@ -1,51 +1,24 @@
 ﻿using System;
 using System.Text;
+using System.Collections.Generic;
 
 namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        /*
+            No cumple el principio SRP, porque esta  clase destinada a solo crear una cita tambien tiene la
+            responsabilidad de verificar si los datos son correctos e imprime la informacon de la cita lo cual
+            lo podria hacer otra clase.
+        */
+
+        public static List<Cita> listaCitas = new List<Cita>();
+        public static string CreateAppointment(Persona persona, Doctor doctor, DateTime dia, string lugar, string id)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
-            Boolean isValid = true;
-
-            if (string.IsNullOrEmpty(name))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'name' is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(id))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'id' is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(phoneNumber))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'phone number' is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(appoinmentPlace))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'appoinment place' is required\n");
-                isValid = false;
-            }
-
-
-            if (string.IsNullOrEmpty(doctorName))
-            {
-                stringBuilder.Append("Unable to schedule appointment, 'doctor name' is required\n");
-                isValid = false;
-            }
-
-            if (isValid)
-            {
-                stringBuilder.Append("Appoinment scheduled");
-            }
-
+            Cita cita1 = new Cita (persona, doctor, dia, lugar, id);
+            stringBuilder = Verificador.Verificar(stringBuilder, cita1, listaCitas);
+            
             return stringBuilder.ToString();
         }
 
